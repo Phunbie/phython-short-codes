@@ -1,0 +1,18 @@
+def spinner(word):
+    word = word[::-1]
+    return word
+
+def plus_5spin(sentence):
+	"""spins words with more than 5 letters"""
+	sentence = sentence.split()
+	for i,j in enumerate(sentence):
+		if len(j) >= 5:
+			sentence[i] = spinner(j)
+	sentence = ' '.join(sentence)
+		
+	return sentence
+	
+lyrics = 'I am great would you agree'
+
+print(plus_5spin(lyrics))
+print(plus_5spin.__doc__)
